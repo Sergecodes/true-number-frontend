@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-cerulean: #2A52BE;
+  --color-cerulean-dark: #24478E;
+}
