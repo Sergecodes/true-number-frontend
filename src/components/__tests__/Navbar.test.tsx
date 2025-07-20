@@ -10,7 +10,7 @@ describe('Navbar', () => {
             <Navbar />
          </AuthContext.Provider>
       );
-      getByText('Login'); getByText('Register');
+      getByText('Login'); getByText('Sign Up');
    });
 
    it('shows admin panel link for admin user', () => {

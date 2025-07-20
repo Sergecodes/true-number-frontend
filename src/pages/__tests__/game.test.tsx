@@ -1,10 +1,9 @@
-import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { AuthContext, User } from '../../context/AuthContext';
 import { ToastContext } from '../../context/ToastContext';
 import GamePage from '..';
 
-jest.mock('../lib/api', () => ({ post: () => ({ data: { generatedNumber: 80, result: 1, newBalance: 150 } }) }));
+jest.mock('@/lib/api', () => ({ post: () => ({ data: { generatedNumber: 80, result: 1, newBalance: 150 } }) }));
 
 describe('GamePage', () => {
    it('plays game and shows a winning toast', async () => {

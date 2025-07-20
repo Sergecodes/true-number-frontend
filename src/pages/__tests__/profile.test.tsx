@@ -1,7 +1,8 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { AuthContext, User } from '../../context/AuthContext';
 import ProfilePage from '../profile';
+
+jest.mock('next/router', () => ({ useRouter: jest.fn() }));
 
 describe('ProfilePage', () => {
   it('displays user information', () => {
