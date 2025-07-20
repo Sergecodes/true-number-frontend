@@ -16,7 +16,7 @@ export default function GamePage() {
       toastCtx?.addToast("You must be logged in to play the game", "error");
       return;
     };
-    
+
     setLoading(true);
     try {
       const { data } = await api.post('/game/play') as any;
@@ -39,7 +39,12 @@ export default function GamePage() {
       <main className="max-w-xl mx-auto py-8">
         <Card>
           <h1 className="text-2xl font-bold text-center mb-4">TrueNumber Game</h1>
-          <p className="text-lg mb-6">🎫 Current Balance: <span className="font-semibold">{auth?.user?.balance}</span> points</p>
+          <p className="text-lg mb-6">🎫 Current Balance:
+            {auth?.user?.balance ?
+              <><span className="font-semibold">{auth?.user?.balance}</span> points</> :
+              '-'
+            }
+          </p>
           <Button onClick={playGame} disabled={loading} className="w-full">
             {loading ? "Playing..." : "🎲 Generate Number"}
           </Button>
