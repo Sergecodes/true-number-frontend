@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 
-interface ToastMessage { id: number; text: string; type?: "info"|"success"|"error"; }
+export interface ToastMessage { id: number; text: string; type?: "info"|"success"|"error"; }
 interface ToastContextType {
   toasts: ToastMessage[];
   addToast: (text: string, type?: "info"|"success"|"error") => void;

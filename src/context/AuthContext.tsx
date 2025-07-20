@@ -2,9 +2,8 @@ import React, { createContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import api from "@/lib/api";
 
-// Define user and auth context types
-interface User {
-  id: string;
+export interface User {
+  _id: string;
   username: string;
   email: string;
   phone: string;
@@ -16,7 +15,7 @@ interface AuthContextType {
   token: string | null;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
-}
+};
 
 export const AuthContext = createContext<AuthContextType | null>(null);
 
