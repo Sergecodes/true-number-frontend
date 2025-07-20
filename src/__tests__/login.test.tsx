@@ -1,6 +1,7 @@
+import React from 'react';
 import { render, screen, fireEvent, act } from '@testing-library/react';
-import LoginPage from '../login';
-import { AuthContext } from '../../context/AuthContext';
+import LoginPage from '../pages/login';
+import { AuthContext } from '../context/AuthContext';
 
 describe('LoginPage', () => {
    it('submits email and password', async () => {

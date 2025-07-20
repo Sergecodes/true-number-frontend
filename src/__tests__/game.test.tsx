@@ -1,7 +1,8 @@
+import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { AuthContext, User } from '../../context/AuthContext';
-import { ToastContext } from '../../context/ToastContext';
-import GamePage from '..';
+import { AuthContext, User } from '../context/AuthContext';
+import { ToastContext } from '../context/ToastContext';
+import GamePage from '../pages';
 
 jest.mock('@/lib/api', () => ({ post: () => ({ data: { generatedNumber: 80, result: 1, newBalance: 150 } }) }));
 

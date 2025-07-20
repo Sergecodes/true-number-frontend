@@ -1,6 +1,7 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { AuthContext, User } from '../../context/AuthContext';
-import ProfilePage from '../profile';
+import { AuthContext, User } from '../context/AuthContext';
+import ProfilePage from '../pages/profile';
 
 jest.mock('next/router', () => ({ useRouter: jest.fn() }));
 

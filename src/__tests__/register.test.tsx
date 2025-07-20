@@ -1,6 +1,7 @@
+import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import RegisterPage from '../register';
-import { ToastContext } from '../../context/ToastContext';
+import RegisterPage from '../pages/register';
+import { ToastContext } from '../context/ToastContext';
 import { useRouter } from 'next/router';
 
 jest.mock('@/lib/api');
